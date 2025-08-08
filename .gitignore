@@ -1,0 +1,17 @@
+# JavaScript/TypeScript
+*.js.map
+*.tsbuildinfo
+
+# Webpack
+webpack-stats.json
+
+# Parcel
+.cache/
+.parcel-cache/
+
+# Vue
+dist-ssr/
+
+# Angular
+.aot/
+.ng/
