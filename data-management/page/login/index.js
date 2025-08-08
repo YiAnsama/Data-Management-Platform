@@ -14,7 +14,7 @@ console.log(mobile, code, button);
 //登录
 button.addEventListener("click", () => {
   if (mobile.value.length !== 11 || code.value.length !== 6) {
-    console.log("输入的手机号或验证码不正确!");
+    myAlert(false, "输入的手机号或验证码不正确!");
   }
   else {
     axios({
