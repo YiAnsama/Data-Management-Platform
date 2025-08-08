@@ -13,26 +13,32 @@ console.log(mobile, code, button);
 
 //登录
 button.addEventListener("click", () => {
-  axios({
-    url: "/v1_0/authorizations",
-    method: "post",
-    data: {
-      mobile: mobile.value,
-      code: code.value
-    }
+  if (mobile.value.length !== 11 || code.value.length !== 6) {
+    console.log("输入的手机号或验证码不正确!");
+  }
+  else {
+    axios({
+      url: "/v1_0/authorizations",
+      method: "post",
+      data: {
+        mobile: mobile.value,
+        code: code.value
+      }
 
-  }).then(result => {
-    // console.log(result);
-    myAlert(true, "登录成功")
-    localStorage.setItem("token", result.data.data.token)
-    setTimeout(() => {
-      location.href = "../content/index.html"
-    }, 1500)
-  })
-    .catch(error => {
-      // console.log(error.response.data.message);
-      myAlert(false, error.response.data.message)
+    }).then(result => {
+      // console.log(result);
+      myAlert(true, "登录成功")
+      localStorage.setItem("token", result.data.data.token)
+      setTimeout(() => {
+        location.href = "../content/index.html"
+      }, 1500)
     })
+      .catch(error => {
+        // console.log(error.response.data.message);
+        myAlert(false, error.response.data.message)
+      })
+  }
+
 })
 
 

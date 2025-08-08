@@ -15,3 +15,5 @@ dist-ssr/
 # Angular
 .aot/
 .ng/
+
+node_modules
