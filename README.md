@@ -4,4 +4,4 @@
 
 start page/login/index.html
 
-可在https://geek.itheima.net/中查看发布的信息
+可在 https://geek.itheima.net 中查看发布的信息
