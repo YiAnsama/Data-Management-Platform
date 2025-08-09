@@ -1,6 +1,6 @@
 // axios 公共配置
 // 基地址
-axios.defaults.baseURL = "http://geek.itheima.net"
+axios.defaults.baseURL = "https://geek.itheima.net"
 
 //请求拦截器 -在发起请求前拦截它,对请求参数进行设置
 axios.interceptors.request.use(function (config) {
